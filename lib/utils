@@ -3,10 +3,10 @@
 function install_dotnet() {
   local BUILD_DIR="$1"
   local CACHE_DIR="$2"
-  local ZIP_NAME="dotnet-2.1.402.tar.gz"
+  local ZIP_NAME="dotnet-runtime-5.0.1-linux-x64.tar.gz"
 
   if [ ! -f $CACHE_DIR/$ZIP_NAME ]; then
-    curl -sSL -o $CACHE_DIR/$ZIP_NAME https://download.microsoft.com/download/8/A/7/8A765126-50CA-4C6F-890B-19AE47961E4B/dotnet-sdk-2.1.402-linux-x64.tar.gz
+    curl -sSL -o $CACHE_DIR/$ZIP_NAME https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.1/dotnet-runtime-5.0.1-linux-x64.tar.gz
   else
     echo "$ZIP_NAME from cache folder"
   fi
